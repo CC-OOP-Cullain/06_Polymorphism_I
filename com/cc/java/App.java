@@ -1,5 +1,6 @@
 package com.cc.java;
 
+
 public class App {
     
     public static void main(String[] args) {
@@ -8,19 +9,19 @@ public class App {
         Worker worker = new Worker();
         Drone drone = new Drone();
 
-        output(queen.doYourJob());
-        output(queen.fly());
+        pollObj(queen);
+        pollObj(worker);
+        pollObj(drone);
 
-        output(worker.doYourJob());
-        output(worker.fly());
-
-        output(drone.doYourJob());
-        output(drone.fly());
-
-        
     }
 
-   
+   private static void pollObj(HoneyBee obj) {
+        output(obj.doYourJob());
+        output(obj.fly());
+
+   }
+
+
     private static void output(String outputStr) {
         System.out.println(outputStr);
     }
